@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=VT323&display=swap');
+
+
+body {
+  margin: 20px;
+  font-family: 'Poppins';
+  color: #333;
+}
+a, h3{
+  color: rgb(55, 51, 120);
+}
+img {
+  max-width: 100%;
+}
+p {
+  color: #333;
+}
+nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 40px;
+}
+nav h1 {
+  margin-right: auto;
+  color: rgb(30, 0, 255);
+}
+.content {
+  color: rgb(15, 15, 77);
+  max-width: 960px;
+  margin: 0 auto;
+}
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.offers, .products {
+  display: flex;
+  gap: 20px;
+}
+
