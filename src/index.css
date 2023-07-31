@@ -9,6 +9,10 @@ body {
   font-family: 'Poppins';
   color: #333;
 }
+
+.div p {
+  color: rgba(255, 255, 255, 0.833);
+}
 ul, h3{
   color: rgb(55, 51, 120);
 }
@@ -81,7 +85,7 @@ nav p{
   #nav-bar ul {
 
     position: fixed ;
-    left: 0px;
+    left: -10px;
     
   }
 }
