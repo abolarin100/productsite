@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=VT323&display=swap');
 
+* {
+  box-sizing: border-box;
+}
 
 body {
-  margin: 20px;
+  margin: 10px;
   font-family: 'Poppins';
   color: #333;
 }
-a, h3{
+ul, h3{
   color: rgb(55, 51, 120);
 }
 img {
@@ -16,22 +19,127 @@ p {
   color: #333;
 }
 nav {
+  background-color: rgb(55, 51, 120);
   display: flex;
-  gap: 10px;
   align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
+  justify-content: space-between;
+  width: 100%;
+  /* margin: 0 auto; */
   border-bottom: 1px solid #e2e2e2;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  position: fixed;
+  top: -1px;
+  left: -0.3px;
+  right: 100px;
+  z-index: 5000;
+
 }
-nav h1 {
+
+#nav-bar ul {
+  display: flex;
+  list-style: none;
+}
+
+#nav-bar ul li a {
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-weight: 15;
+  padding: 6px 15px;
+  border-radius: 30px;
+  transition: 0.2s;
+  margin: 0 5px;
+  text-decoration: none;
+  list-style: none;
+}
+
+#nav-bar ul li a:hover {
+  color: rgb(17, 15, 61) ;
+  background: white;
+}
+
+nav .div {
   margin-right: auto;
   color: rgb(30, 0, 255);
 }
+.hamburger {
+  display: none;
+}
+nav p{
+  margin-top: -22px;
+}
+
+@media only screen and (max-width: 1320px) {
+  nav {
+    padding: 0 35px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+
+  }
+
+  /* .hamburger .line {
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    margin-right: 40px;
+    background: white;
+  } */
+  #nav-bar {
+    /* display: none; */
+    position: fixed;
+    height: 300px;
+    top: 80px;
+    /* display: flex; */
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: rgb(55, 51, 120);
+    transition: 0.2s;
+    overflow: hidden;
+    opacity: 0;
+
+  }
+
+  #mobile i{
+    color: white;
+  }
+
+  #nav-bar ul {
+    display: block;
+    position: fixed;
+    left: 200px;
+    top: 0px;
+  
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    color: white;
+    list-style: none;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 1;
+  }
+
+  #nav-bar.active {
+    opacity: 1;
+  }
+
+
+  #nav-bar li a {
+    margin-bottom: 12px;
+    color: red;
+  }
+}
+
 .content {
   color: rgb(15, 15, 77);
   max-width: 960px;
   margin: 0 auto;
+  position: relative;
+  top: 130px;
 }
 .product {
   display: grid;

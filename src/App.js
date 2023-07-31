@@ -11,15 +11,42 @@ import Contact from './pages/Contact'
 function App() {
   const [cartIsEmpty] = useState(false)
 
+  const [clicked, setClicked] = useState(false)
+
+
+  const handleClick = () => {
+    setClicked(!clicked)
+  }
+
+  
+
   return (
     <div className="App">
       <BrowserRouter>
         <nav>
-          <h1>Davolayebi Nigeria Limited</h1>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/contact">Contact</Link>
+          <div className='div'>
+             <h1>Davolayebi</h1>
+             <p>Nigeria Limited</p>
+          </div>
+
+          <div id='mobile' className='hamburger' onClick={handleClick} >
+            <i id='bar' className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i> 
+           
+            
+              {/* <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div> */}
+          </div>
+        <div id="nav-bar"  className={clicked ? "#nav-bar active" : "#nav-bar" }>
+        <ul  id='navbar' className={clicked ? "#nav-bar active" : "#nav-bar" }>  
+          <li><Link to="/">Home</Link></li>
+          <li> <Link to="/about">About</Link></li>
+          <li><Link to="/products">Products</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+
+          </ul>  
+        </div>  
+        
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
