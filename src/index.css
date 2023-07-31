@@ -85,7 +85,7 @@ nav p{
   #nav-bar ul {
 
     position: fixed ;
-    left: -100px;
+    right: 200px;
     
   }
 }
