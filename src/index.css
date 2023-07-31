@@ -74,7 +74,19 @@ nav p{
     padding: 0 35px;
   }
 }
-@media only screen and (max-width: 900px) {
+
+
+
+@media only screen and (max-width: 500px){
+  #nav-bar ul {
+
+    position: fixed ;
+    left: 50px;
+    
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .hamburger {
     display: block;
     cursor: pointer;
@@ -110,8 +122,9 @@ nav p{
 
   #nav-bar ul {
     display: block;
+   
     position: fixed;
-    left: 200px;
+    left: 150px;
     top: 0px;
   
     width: fit-content;
